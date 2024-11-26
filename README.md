@@ -23,7 +23,7 @@ This project is a simple currency converter that allows users to convert amounts
 4. Click the **Convert** button to see the result.
 
 ## Important Note
-You can replace the `API_KEY` value in the `app.js` file (Line 6) with your own API key from [ExchangeRate-API](https://www.exchangerate-api.com/).
+You need to fill in the API_KEY value in line 6 of the app.js file with the API key you get from [ExchangeRate-API](https://www.exchangerate-api.com/).
 
 ## Acknowledgements
 Exchange rate information provided by [ExchangeRate-API](https://www.exchangerate-api.com/).
