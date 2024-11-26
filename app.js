@@ -3,7 +3,7 @@ import axios from  "axios";
 
 const app = express();
 const port = 3000;
-const API_KEY = "7c61f5107b57e66ee0fae5e3";
+const API_KEY = "";
 const API_URL = "https://v6.exchangerate-api.com/v6/";
 
 app.use(express.static("public"));
