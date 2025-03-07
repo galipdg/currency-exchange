@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Currency Exchange</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <h1>Currency Exchange</h1>
+  <form id="currency-form" action="/convert" method="GET">
+    <label for="baseCurrency"></label>
+    <select id="baseCurrency" name="baseCurrency" required>
+      <option value="AUD">AUD (Australian Dollar)</option>
+      <option value="CAD">CAD (Canadian Dollar)</option>
+      <option value="EUR">EUR (Euro)</option>
+      <option value="TRY">TRY (Turkish Lira)</option>
+      <option value="USD">USD (US Dollar)</option>
+      <option value="GBP">GBP (British Pound)</option>
+      <option value="JPY">JPY (Japanese Yen)</option>
+      <option value="CHF">CHF (Swiss Franc)</option>
+      <option value="CNY">CNY (Chinese Yuan)</option>
+      <option value="INR">INR (Indian Rupee)</option>
+      <option value="MXN">MXN (Mexican Peso)</option>
+    </select>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+
+    <label for="targetCurrency">Convert to:</label>
+    <select id="targetCurrency" name="targetCurrency" required>
+      <option value="AUD">AUD (Australian Dollar)</option>
+      <option value="CAD">CAD (Canadian Dollar)</option>
+      <option value="EUR">EUR (Euro)</option>
+      <option value="TRY">TRY (Turkish Lira)</option>
+      <option value="USD">USD (US Dollar)</option>
+      <option value="GBP">GBP (British Pound)</option>
+      <option value="JPY">JPY (Japanese Yen)</option>
+      <option value="CHF">CHF (Swiss Franc)</option>
+      <option value="CNY">CNY (Chinese Yuan)</option>
+      <option value="INR">INR (Indian Rupee)</option>
+      <option value="MXN">MXN (Mexican Peso)</option>
+    </select>
+
+    <button type="submit">Convert</button>
+  </form>
+  <div id="box">
+    <% if (convertedAmount && amount) { %>
+      <div id="result"><h2><%= amount %> <%= baseCurrency %> = <%= convertedAmount %> <%= targetCurrency %></h2></div>
+      <br>
+      <br>
+      <div id="update"><p>Last update (UTC): <%= date %></p></div>
+    <% } else { %>
+      <h2>To convert currencies, select the base currency, enter the amount, choose the target currency, and click "Convert".</h2>
+     <% } %>
+  </div>
+
+  <footer>Exchange rate information provided by ExchangeRate-API.</footer>
+</body>
+
+</html>
